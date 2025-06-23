@@ -13,7 +13,7 @@
 ## 🚀 Quick Links
 
 - 🖥️ <b>Live Demo:</b> [india-growth-explorer.vercel.app](https://india-growth-explorer.vercel.app/)
-- 🛠️ <b>Source Code:</b> [This Repository](#)
+- 🛠️ <b>Source Code:</b> [This Repository](https://github.com/Lokesh-reddy18/India-Growth-Explorer)
 
 ## 🛠️ Tech Stack
 
@@ -49,7 +49,7 @@ India-Growth-Explorer/
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/Lokesh-reddy18/India-Growth-Explorer
    cd India-Growth-Explorer
    ```
 
