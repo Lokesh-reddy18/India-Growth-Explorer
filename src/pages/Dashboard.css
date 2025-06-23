@@ -1,0 +1,371 @@
+/* Dashboard.css */
+
+/* Glassmorphism-style blurred radial background */
+#root::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at 25% 30%, #ccefff 20%, transparent 60%),
+              radial-gradient(circle at 75% 70%, #ffe9ec 20%, transparent 60%);
+  background-size: cover;
+  filter: blur(60px);
+  opacity: 0.15;
+  z-index: -1;
+}
+
+/* Base body */
+body {
+  background-color: #f7f9fc;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #2c3e50;
+}
+
+body.dark {
+  background-color: #1a1a1a;
+  color: #f3f3f3;
+}
+
+/* Section heading */
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+  color: #34495e;
+  text-align: center;
+  position: relative;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin: 8px auto 0;
+  background: linear-gradient(to right, #00bcd4, #2196f3);
+  border-radius: 2px;
+}
+
+/* Chart wrapper glassmorphic card */
+.chart-wrapper {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  margin: 2rem auto;
+  max-width: 1000px;
+  transition: transform 0.3s ease;
+}
+.chart-wrapper:hover {
+  transform: scale(1.01);
+}
+
+/* Dropdown styling */
+.Select__control {
+  border-radius: 12px !important;
+  background-color: #ffffff !important;
+  border: 1px solid #dee2e6 !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05) !important;
+  transition: border-color 0.3s ease;
+}
+.Select__control:hover {
+  border-color: #00bcd4 !important;
+}
+
+/* Optional: smooth section spacing */
+section {
+  padding: 3rem 1rem;
+}
+
+/* Responsive tweaks (optional) */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.6rem;
+  }
+  .chart-wrapper {
+    padding: 1rem;
+  }
+}
+
+/* TimelineMap Modern Styles */
+.timeline-map-container {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 2rem 0;
+}
+
+.timeline-map-controls {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.timeline-map-info-panel {
+  padding: 1.5rem 1rem;
+  border: 1.5px solid #e0e0e0;
+  border-radius: var(--border-radius);
+  min-width: 260px;
+  max-width: 220px;
+  background: var(--card-bg);
+  font-size: 1rem;
+  box-shadow: var(--card-shadow);
+  margin-left: 1rem;
+  transition: box-shadow 0.2s;
+}
+.timeline-map-info-panel h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+}
+.timeline-map-info-panel p {
+  margin: 0.3rem 0;
+  color: var(--text);
+}
+.timeline-map-info-panel .empty {
+  font-style: italic;
+  color: #888;
+}
+
+@media (max-width: 1100px) {
+  .timeline-map-container {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .timeline-map-info-panel {
+    margin-left: 0;
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+/* Heatmap Modern Styles */
+.heatmap-card {
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--border-radius);
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 1100px;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heatmap-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.heatmap-dropdown {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.heatmap-dropdown label {
+  font-weight: 600;
+  color: var(--text);
+}
+.heatmap-dropdown select {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background: var(--card-bg);
+  color: var(--text);
+  transition: border 0.2s;
+}
+.heatmap-dropdown select:focus {
+  border: 1.5px solid var(--primary);
+  outline: none;
+}
+.heatmap-map {
+  width: 100%;
+  height: 70vh;
+  min-height: 400px;
+  max-width: 1000px;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+@media (max-width: 900px) {
+  .heatmap-card {
+    padding: 1.2rem 0.2rem;
+  }
+  .heatmap-map {
+    height: 50vh;
+    min-height: 250px;
+  }
+  .heatmap-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* LineChartPage Modern Styles */
+.linechart-card {
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--border-radius);
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 1100px;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.linechart-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.linechart-selects {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.linechart-select {
+  min-width: 220px;
+}
+@media (max-width: 900px) {
+  .linechart-card {
+    padding: 1.2rem 0.2rem;
+  }
+  .linechart-title {
+    font-size: 1.3rem;
+  }
+  .linechart-selects {
+    gap: 0.5rem;
+  }
+}
+
+/* MetricDetails Modern Styles */
+.metricdetails-card {
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--border-radius);
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 1100px;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.metricdetails-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+.metricdetails-desc {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .metricdetails-card {
+    padding: 1.2rem 0.2rem;
+  }
+  .metricdetails-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* Rankings Modern Styles */
+.rankings-card {
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--border-radius);
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 1100px;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: auto;
+}
+.rankings-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.rankings-controls {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.rankings-select, .rankings-search {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background: var(--card-bg);
+  color: var(--text);
+  transition: border 0.2s;
+}
+.rankings-select:focus, .rankings-search:focus {
+  border: 1.5px solid var(--primary);
+  outline: none;
+}
+.rankings-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 1.05rem;
+}
+.rankings-table th, .rankings-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 2px solid #eee;
+}
+.rankings-table th {
+  background: #f3f4f6;
+  font-weight: 700;
+}
+.top-rank {
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffe0b2 0%, #fff3e0 100%) !important;
+  color: #b45309;
+}
+@media (max-width: 900px) {
+  .rankings-card {
+    padding: 1.2rem 0.2rem;
+  }
+  .rankings-title {
+    font-size: 1.3rem;
+  }
+}
+
+body.dark .rankings-table th {
+  background: #23272f;
+  color: #f3f3f3;
+}
+body.dark .rankings-table td {
+  color: #f3f3f3;
+}
+body.dark .top-rank {
+  background: linear-gradient(90deg, #4e342e 0%, #23272f 100%) !important;
+  color: #ffd54f;
+}
+
