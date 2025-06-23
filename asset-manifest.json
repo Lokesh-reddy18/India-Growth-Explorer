@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/India-Growth-Explorer/static/css/main.5e300488.css",
+    "main.js": "/India-Growth-Explorer/static/js/main.c9a23689.js",
+    "static/js/977.f1554c0a.chunk.js": "/India-Growth-Explorer/static/js/977.f1554c0a.chunk.js",
+    "static/js/455.9b196a5b.chunk.js": "/India-Growth-Explorer/static/js/455.9b196a5b.chunk.js",
+    "static/js/453.1a10211c.chunk.js": "/India-Growth-Explorer/static/js/453.1a10211c.chunk.js",
+    "index.html": "/India-Growth-Explorer/index.html",
+    "main.5e300488.css.map": "/India-Growth-Explorer/static/css/main.5e300488.css.map",
+    "main.c9a23689.js.map": "/India-Growth-Explorer/static/js/main.c9a23689.js.map",
+    "977.f1554c0a.chunk.js.map": "/India-Growth-Explorer/static/js/977.f1554c0a.chunk.js.map",
+    "455.9b196a5b.chunk.js.map": "/India-Growth-Explorer/static/js/455.9b196a5b.chunk.js.map",
+    "453.1a10211c.chunk.js.map": "/India-Growth-Explorer/static/js/453.1a10211c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e300488.css",
+    "static/js/main.c9a23689.js"
+  ]
+}
